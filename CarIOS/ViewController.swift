@@ -15,7 +15,7 @@ class ViewController: UIViewController {
   // engine
   @IBOutlet weak var displayEngineStatus: UILabel!
   
-  @IBAction func changeEngineStatus(_ sender: UIButton) {
+  @IBAction func changeEngineStatus(_: UIButton) {
     if ferrari.getEngineStatus() {
       
       if ferrari.turnOffEngine() {
@@ -39,6 +39,15 @@ class ViewController: UIViewController {
   
   
   //gear
+  @IBOutlet weak var gearR: UIButton!
+  @IBOutlet weak var gearN: UIButton!
+  @IBOutlet weak var gear1: UIButton!
+  @IBOutlet weak var gear2: UIButton!
+  @IBOutlet weak var gear3: UIButton!
+  @IBOutlet weak var gear4: UIButton!
+  @IBOutlet weak var gear5: UIButton!
+  
+  
   func dsidplayGear(gear: Int) {
     if ferrari.setGear(withGear: gear) {
       var newGearChar :String!
@@ -70,26 +79,17 @@ class ViewController: UIViewController {
   }
   
   // second type switch gear
-  @IBAction func gearR(_ sender: UIButton) {
-    dsidplayGear(gear: -1)
-  }
-  @IBAction func gearN(_ sender: UIButton) {
-    dsidplayGear(gear: 0)
-  }
-  @IBAction func gear1(_ sender: UIButton) {
-    dsidplayGear(gear: 1)
-  }
-  @IBAction func gear2(_ sender: UIButton) {
-    dsidplayGear(gear: 2)
-  }
-  @IBAction func gear3(_ sender: UIButton) {
-    dsidplayGear(gear: 3)
-  }
-  @IBAction func gear4(_ sender: UIButton) {
-    dsidplayGear(gear: 4)
-  }
-  @IBAction func gear5(_ sender: UIButton) {
-    dsidplayGear(gear: 5)
+  @IBAction func gearR(_ gear: UIButton) {
+    switch gear {
+    case gearR: dsidplayGear(gear: -1)
+    case gearN: dsidplayGear(gear: 0)
+    case gear1: dsidplayGear(gear: 1)
+    case gear2: dsidplayGear(gear: 2)
+    case gear3: dsidplayGear(gear: 3)
+    case gear4: dsidplayGear(gear: 4)
+    case gear5: dsidplayGear(gear: 5)
+    default:    dsidplayGear(gear: 0)
+    }
   }
   
   // speed
@@ -101,23 +101,27 @@ class ViewController: UIViewController {
       speedometr.textColor = UIColor.red
     }
     
-    changeOneSpeed.value = Double( ferrari.getSpeed() )
-    changeSpeed.value = Float( ferrari.getSpeed() )
+    changeOneSpeed.value      = Double( ferrari.getSpeed() )
+    changeSpeed.value         = Float( ferrari.getSpeed() )
+    displaySpeed.pointerAngle = CGFloat( ferrari.getSpeed() )
   }
   
+  
+  @IBOutlet weak var displaySpeed: Speedometer!
   @IBOutlet weak var speedometr: UILabel!
   @IBOutlet weak var changeOneSpeed: UIStepper!
   @IBOutlet weak var changeSpeed: UISlider!
   
-  @IBAction func setSpeedStep(_ sender: UIStepper) {
-    displaySpeed( speed: Int(sender.value) )
+  @IBAction func setSpeedStep(_ speedStepper: UIStepper) {
+    displaySpeed( speed: Int(speedStepper.value) )
   }
   
-  @IBAction func setSpeed(_ sender: UISlider) {
-    displaySpeed( speed: Int(sender.value) )
+  @IBAction func setSpeed(_ speedSlider: UISlider) {
+    displaySpeed( speed: Int(speedSlider.value) )
   }
   
   
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -127,7 +131,6 @@ class ViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
   
 }
 

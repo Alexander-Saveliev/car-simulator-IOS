@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40DD9EB41EF5511A00AE8E25 /* Speedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DD9EB31EF5511A00AE8E25 /* Speedometer.swift */; };
+		40DD9EB61EF569F100AE8E25 /* LineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DD9EB51EF569F100AE8E25 /* LineStyle.swift */; };
 		40E2BE271EF2F535005DFE1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2BE261EF2F535005DFE1A /* AppDelegate.swift */; };
 		40E2BE291EF2F535005DFE1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2BE281EF2F535005DFE1A /* ViewController.swift */; };
 		40E2BE2C1EF2F535005DFE1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E2BE2A1EF2F535005DFE1A /* Main.storyboard */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40DD9EB31EF5511A00AE8E25 /* Speedometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speedometer.swift; sourceTree = "<group>"; };
+		40DD9EB51EF569F100AE8E25 /* LineStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStyle.swift; sourceTree = "<group>"; };
 		40E2BE231EF2F535005DFE1A /* CarIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E2BE261EF2F535005DFE1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		40E2BE281EF2F535005DFE1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		40E2BE281EF2F535005DFE1A /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = CarIOS/ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		40E2BE2B1EF2F535005DFE1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40E2BE2D1EF2F535005DFE1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40E2BE301EF2F535005DFE1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,9 +41,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		407B05481EF508D9004CC35B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40DD9EB31EF5511A00AE8E25 /* Speedometer.swift */,
+				40E2BE2A1EF2F535005DFE1A /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		40DAFA121EF64BCD002A28C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40E2BE281EF2F535005DFE1A /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		40E2BE1A1EF2F535005DFE1A = {
 			isa = PBXGroup;
 			children = (
+				40DAFA121EF64BCD002A28C0 /* Controller */,
+				407B05481EF508D9004CC35B /* View */,
 				40E2BE381EF2F53D005DFE1A /* Model */,
 				40E2BE251EF2F535005DFE1A /* CarIOS */,
 				40E2BE241EF2F535005DFE1A /* Products */,
@@ -58,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				40E2BE261EF2F535005DFE1A /* AppDelegate.swift */,
-				40E2BE281EF2F535005DFE1A /* ViewController.swift */,
-				40E2BE2A1EF2F535005DFE1A /* Main.storyboard */,
 				40E2BE2D1EF2F535005DFE1A /* Assets.xcassets */,
 				40E2BE2F1EF2F535005DFE1A /* LaunchScreen.storyboard */,
 				40E2BE321EF2F535005DFE1A /* Info.plist */,
@@ -71,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				40E2BE391EF2F566005DFE1A /* CarClass.swift */,
+				40DD9EB51EF569F100AE8E25 /* LineStyle.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -149,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				40E2BE291EF2F535005DFE1A /* ViewController.swift in Sources */,
+				40DD9EB41EF5511A00AE8E25 /* Speedometer.swift in Sources */,
 				40E2BE3A1EF2F566005DFE1A /* CarClass.swift in Sources */,
 				40E2BE271EF2F535005DFE1A /* AppDelegate.swift in Sources */,
+				40DD9EB61EF569F100AE8E25 /* LineStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +187,7 @@
 				40E2BE2B1EF2F535005DFE1A /* Base */,
 			);
 			name = Main.storyboard;
+			path = CarIOS;
 			sourceTree = "<group>";
 		};
 		40E2BE2F1EF2F535005DFE1A /* LaunchScreen.storyboard */ = {
