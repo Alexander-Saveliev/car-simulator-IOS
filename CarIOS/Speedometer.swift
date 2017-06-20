@@ -34,12 +34,13 @@ import UIKit
   @IBInspectable var contrastLength: CGFloat = 12
   @IBInspectable var contrastSize: CGFloat   = 2
   
+  
   @IBInspectable var extraContrastZero: Int       = 0
   @IBInspectable var extraContrastStep: Int       = 6
   @IBInspectable var extraContrastColor: UIColor  = UIColor.red
   @IBInspectable var extraContrastLength: CGFloat = 15
   @IBInspectable var extraContrastSize: CGFloat   = 3
-  
+
   
   func drawOneLine(startX: CGFloat, startY: CGFloat, endX: CGFloat, endY: CGFloat, color: UIColor, size: CGFloat) {
     let linePath = UIBezierPath()
@@ -88,7 +89,7 @@ import UIKit
         color = contrastColor
         size  = contrastSize
       }
-
+      
       drawOneLine(startX: x0, startY: y0, endX: x1, endY: y1, color: color, size: size)
     }
   }
@@ -105,11 +106,10 @@ import UIKit
     
     let x1 = centerX - (pointerLength) * cosAlpha
     let y1 = centerY - (pointerLength) * sinAlpha
-
+    
     drawOneLine(startX: centerX, startY: centerY, endX: x1, endY: y1, color: pointerColor, size: pointerSize)
   }
   
-  // ---------------------------
   
   override func draw(_ rect: CGRect) {
     drawScale()

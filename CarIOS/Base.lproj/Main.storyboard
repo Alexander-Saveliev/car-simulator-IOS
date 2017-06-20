@@ -63,7 +63,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="N"/>
                                 <connections>
-                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="feO-s6-8xV"/>
+                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pva-B8-uMu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEs-PX-8oG">
@@ -72,7 +72,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="1"/>
                                 <connections>
-                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnI-qD-5JV"/>
+                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PL2-S3-yud"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feR-wp-27n">
@@ -81,7 +81,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="2"/>
                                 <connections>
-                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="27p-Zz-cqH"/>
+                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHC-nv-4nn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHS-pD-nGY">
@@ -90,7 +90,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="3"/>
                                 <connections>
-                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqL-4Y-R4N"/>
+                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vd6-zr-cGv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI5-M0-A10">
@@ -99,7 +99,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="4"/>
                                 <connections>
-                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IlP-dP-mTT"/>
+                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3MX-u2-6W1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIm-dj-vJF">
@@ -108,7 +108,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="5"/>
                                 <connections>
-                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28v-cB-zVs"/>
+                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1eA-oC-DM4"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-wh-hns">
@@ -145,6 +145,15 @@
                                 <state key="normal" title="Change"/>
                                 <connections>
                                     <action selector="changeEngineStatus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FUp-BE-kBo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-Ym-7hp">
+                                <rect key="frame" x="16" y="346" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="R"/>
+                                <connections>
+                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5L-Fz-H3A"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Lc-TZ-OvJ" customClass="Speedometer" customModule="CarIOS" customModuleProvider="target">
@@ -219,15 +228,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-Ym-7hp">
-                                <rect key="frame" x="16" y="346" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="R"/>
-                                <connections>
-                                    <action selector="gearR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yuW-D9-LOs"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -238,13 +238,13 @@
                         <outlet property="displayEngineStatus" destination="Acg-Rk-1ay" id="uVg-7o-qOy"/>
                         <outlet property="displayGear" destination="8Lq-zI-rMG" id="SWl-gG-v7L"/>
                         <outlet property="displaySpeed" destination="5Lc-TZ-OvJ" id="Ffq-36-I5l"/>
-                        <outlet property="gear1" destination="bEs-PX-8oG" id="nun-W9-c6x"/>
-                        <outlet property="gear2" destination="feR-wp-27n" id="zas-xN-8Px"/>
-                        <outlet property="gear3" destination="GHS-pD-nGY" id="7mv-Gs-I8q"/>
-                        <outlet property="gear4" destination="ZI5-M0-A10" id="o55-BX-Pg2"/>
-                        <outlet property="gear5" destination="NIm-dj-vJF" id="m2M-c4-A7I"/>
-                        <outlet property="gearN" destination="p8l-iy-DuJ" id="eZW-2d-ebg"/>
-                        <outlet property="gearR" destination="dfd-Ym-7hp" id="RNL-JS-NGv"/>
+                        <outlet property="gear1" destination="bEs-PX-8oG" id="sVY-1e-7D1"/>
+                        <outlet property="gear2" destination="feR-wp-27n" id="qcH-72-2vf"/>
+                        <outlet property="gear3" destination="GHS-pD-nGY" id="fY4-la-GrM"/>
+                        <outlet property="gear4" destination="ZI5-M0-A10" id="wEZ-aK-VMR"/>
+                        <outlet property="gear5" destination="NIm-dj-vJF" id="LMH-v4-0nr"/>
+                        <outlet property="gearN" destination="p8l-iy-DuJ" id="1T3-2d-hNi"/>
+                        <outlet property="gearR" destination="dfd-Ym-7hp" id="Yje-1z-Kan"/>
                         <outlet property="speedometr" destination="wVn-7I-LMH" id="H0a-fg-YgD"/>
                     </connections>
                 </viewController>

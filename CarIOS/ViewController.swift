@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
   
-  let ferrari = Car()
+  private let ferrari = Car()
   
-  // engine
+  // MARK: engine
   @IBOutlet weak var displayEngineStatus: UILabel!
   
   @IBAction func changeEngineStatus(_: UIButton) {
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
   }
   
   
-  //gear
+  // MARK: gear
   @IBOutlet weak var gearR: UIButton!
   @IBOutlet weak var gearN: UIButton!
   @IBOutlet weak var gear1: UIButton!
@@ -47,8 +47,11 @@ class ViewController: UIViewController {
   @IBOutlet weak var gear4: UIButton!
   @IBOutlet weak var gear5: UIButton!
   
+  @IBOutlet weak var displayGear: UILabel!
+  @IBOutlet weak var changeOneGear: UIStepper!
   
-  func dsidplayGear(gear: Int) {
+  
+  private func displayGear(gear: Int) {
     if ferrari.setGear(withGear: gear) {
       var newGearChar :String!
       
@@ -70,30 +73,27 @@ class ViewController: UIViewController {
     }
   }
   
-  @IBOutlet weak var displayGear: UILabel!
-  @IBOutlet weak var changeOneGear: UIStepper!
-  
   @IBAction func changeOneGear(_ sender: UIStepper) {
     let newGear = Int(sender.value)
-    dsidplayGear(gear: newGear)
+    displayGear(gear: newGear)
   }
   
   // second type switch gear
   @IBAction func gearR(_ gear: UIButton) {
     switch gear {
-    case gearR: dsidplayGear(gear: -1)
-    case gearN: dsidplayGear(gear: 0)
-    case gear1: dsidplayGear(gear: 1)
-    case gear2: dsidplayGear(gear: 2)
-    case gear3: dsidplayGear(gear: 3)
-    case gear4: dsidplayGear(gear: 4)
-    case gear5: dsidplayGear(gear: 5)
-    default:    dsidplayGear(gear: 0)
+    case gearR: displayGear(gear: -1)
+    case gearN: displayGear(gear: 0)
+    case gear1: displayGear(gear: 1)
+    case gear2: displayGear(gear: 2)
+    case gear3: displayGear(gear: 3)
+    case gear4: displayGear(gear: 4)
+    case gear5: displayGear(gear: 5)
+    default:    displayGear(gear: 0)
     }
   }
   
   // speed
-  func displaySpeed(speed: Int) {
+  private func displaySpeed(speed: Int) {
     if ferrari.setSpeed(withSpeed: speed) {
       speedometr.text = String( ferrari.getSpeed() )
       speedometr.textColor = nil

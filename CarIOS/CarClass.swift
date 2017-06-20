@@ -39,7 +39,9 @@ class Car {
   func turnOnEngine() -> Bool {
     guard self.engineStatus == .off && self.gear      == 0 &&
           self.speed        == 0    && self.direction == .stand
-      else { return false }
+    else {
+        return false
+    }
     
     self.engineStatus = .on
     return true
@@ -49,7 +51,9 @@ class Car {
   func turnOffEngine() -> Bool {
     guard self.engineStatus == .on && self.gear      == 0 &&
           self.speed        == 0   && self.direction == .stand
-      else { return false }
+    else {
+      return false
+    }
     
     self.engineStatus = .off
     return true
@@ -59,29 +63,41 @@ class Car {
   //set speed and direction
   func setSpeed(withSpeed speed: Int) -> Bool {
     guard self.engineStatus == .on && speedLimit[self.gear] != nil
-      else { return false }
+    else {
+      return false
+    }
     
     let speedRange = speedLimit[self.gear]!
     
     guard speedRange.contains(speed)
-      else { return false }
+    else {
+      return false
+    }
     
     if gear != 0 || speed <= self.speed {
       
-      if speed     ==  0 { self.direction = .stand }
-      else if gear == -1 { self.direction = .backward }
-      else if gear !=  0 { self.direction = .forward }
+      if speed     ==  0 {
+        self.direction = .stand
+      } else if gear == -1 {
+        self.direction = .backward
+      } else if gear !=  0 {
+        self.direction = .forward
+      }
       
       self.speed = speed
       return true
       
-    } else { return false }
+    } else {
+      return false
+    }
   }
   
   
   func setGear(withGear gear: Int) -> Bool {
     guard speedLimit[gear]!.contains(self.speed)
-      else { return false }
+    else {
+      return false
+    }
     
     switch gear {
     case -1 where self.engineStatus == .on && ( self.direction == .stand || self.gear == gear ):
@@ -106,36 +122,15 @@ class Car {
   }
   
   func getEngineStatus() -> Bool {
-    if self.engineStatus == .on {
-      return true
-    } else {
-      return false
-    }
+    return engineStatus == .on
   }
   
   func getGear() -> Int {
-    return self.gear
+    return gear
   }
   
   func getSpeed() -> Int {
-    return self.speed
+    return speed
   }
-  
-  
-  /*// Some useful things
-   func resetCar() {
-   self.speed         = 0
-   self.gear          = 0
-   self.direction     = .stand
-   self.engineStatus  = .off
-   }
-   
-   
-   func showCarStatus() {
-   print("Engine : \(self.engineStatus.rawValue)")
-   print("Direction : \(self.direction.rawValue)")
-   print("Gear : \(self.gear)")
-   print("Speed : \(self.speed)")
-   }*/
 }
 
